@@ -32,11 +32,16 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [
-      {
-        "source": "**",
-        "destination": "/edit.html"
-      }
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/edit", "destination": "/edit.html" },
+      { "source": "/auth", "destination": "/auth.html" },
+      { "source": "/support", "destination": "/support.html" },
+      { "source": "/privacy", "destination": "/privacy.html" },
+      { "source": "/profile", "destination": "/community.html" },
+      { "source": "/home", "destination": "/community.html" },
+      { "source": "/users/:path*", "destination": "/community.html" },
+      { "source": "/songs/:path*", "destination": "/community.html" }
     ]
   }
 }
